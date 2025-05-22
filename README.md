@@ -2,9 +2,9 @@
 This project is a full stack web application for listing interior designers. It supports features like viewing designer details, shortlisting designers, hiding listings, and more. This is built for the EmptyCup assignment as a mobile-first web application.
 
 🌐 Live Demo
-Frontend: [Link to deployed frontend]
+Frontend: https://emptycuppp.netlify.app/
 
-Backend: [Link to deployed backend API]
+Backend: https://empty-cup-3kff.onrender.com/
 
 
 📦 Backend Setup (Flask)
