@@ -68,7 +68,7 @@
 
   async function loadDesigners() {
     try {
-      const res = await fetch('http://localhost:5000/designers'); // Update this if needed
+      const res = await fetch('https://empty-cup-3kff.onrender.com/designers'); // Update this if needed
       console.log(res)
       if (!res.ok) throw new Error('Failed to fetch designers');
       const designers = await res.json();
@@ -138,7 +138,7 @@
       btn.onclick = async () => {
         const id = btn.getAttribute('data-id');
         try {
-          const res = await fetch(`http://localhost:5000/designers/${id}/hide`, { method: 'POST' });
+          const res = await fetch(`https://empty-cup-3kff.onrender.com/designers/${id}/hide`, { method: 'POST' });
           if (!res.ok) throw new Error('Failed to hide designer');
           btn.closest('section').remove();
         } catch (err) {
@@ -151,7 +151,7 @@
       btn.onclick = async () => {
         const id = btn.getAttribute('data-id');
         try {
-          const res = await fetch(`http://localhost:5000/designers/${id}/shortlist`, { method: 'POST' });
+          const res = await fetch(`https://empty-cup-3kff.onrender.com/designers/${id}/shortlist`, { method: 'POST' });
           if (!res.ok) throw new Error('Failed to toggle shortlist');
           const data = await res.json();
           const icon = btn.querySelector('i');
