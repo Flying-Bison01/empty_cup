@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
 
+
 app = Flask(__name__)
 CORS(app)  # ← This allows requests from other origins
 
@@ -63,5 +64,8 @@ def hide_designer(designer_id):
     designer["hidden"] = True
     return jsonify({"id": designer_id, "hidden": True})
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
